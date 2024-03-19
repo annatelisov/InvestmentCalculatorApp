@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/setting_IMG_img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"
+        android:src="@drawable/gear"/>
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="MyMoney"
+        android:textColor="@color/purple_200"
+        android:textSize="32sp"/>
+
+
+    <TextView
+        android:id="@+id/textViewStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_IMG_img"
+        android:layout_marginTop="32dp"
+        android:text="Enter parameters to calculate"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:id="@+id/editTextFirstDeposit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewStart"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Your First Deposit"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/editTextMonthlyDeposit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFirstDeposit"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Your Monthly Deposit"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMonthlyDeposit"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Time in Years"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/editTextAnnualInterest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTime"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Annual Interest"
+        android:inputType="numberDecimal"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAnnualInterest"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioUSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioEUR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EUR"/>
+
+        <RadioButton
+            android:id="@+id/radioILS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ILS"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/mainButtonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupCurrency"
+        android:layout_marginTop="16dp"
+        android:text="Calculate"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainButtonCalculate"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textSize="18sp"/>
+</RelativeLayout>
